@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HDI Predictor - 23A21A4649</title>
+    <style>
+        body { font-family: Arial; background: #f0f8ff; text-align: center; padding: 20px; }
+       .container { background: white; padding: 20px; border-radius: 10px; width: 50%; margin: auto; box-shadow: 0 0 10px #ccc; }
+        input { margin: 5px; padding: 8px; width: 80%; }
+        button { background: #007bff; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; }
+        h2 { color: green; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>❤️ Heart Disease Indicator Prediction</h1>
+        <p>Roll No: 23A21A4649</p>
+        <form action="/predict" method="post">
+            <input type="number" step="any" name="Age" placeholder="Age" required><br>
+            <input type="number" step="any" name="BMI" placeholder="BMI" required><br>
+            <input type="number" name="Smoking" placeholder="Smoking 0=No 1=Yes" required><br>
+            <input type="number" name="Alcohol" placeholder="Alcohol 0=No 1=Yes" required><br>
+            <input type="number" name="Diabetes" placeholder="Diabetes 0=No 1=Yes" required><br>
+            <input type="number" name="HighBP" placeholder="HighBP 0=No 1=Yes" required><br>
+            <input type="number" name="HighChol" placeholder="HighChol 0=No 1=Yes" required><br>
+            <button type="submit">Predict Risk</button>
+        </form>
+        <h2>{{ prediction_text }}</h2>
+    </div>
+</body>
+</html>
